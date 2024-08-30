@@ -1,0 +1,48 @@
+.bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+    margin-bottom:25px ;
+}
+
+.searchBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+
+}
+
+.searchBox img{
+    width: 24px;
+    cursor: pointer;
+}
+
+.searchBox input{
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.searchBox div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bottomInfo{
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+    color: rgb(100, 100, 100);
+}
