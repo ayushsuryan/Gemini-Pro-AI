@@ -9,7 +9,7 @@ export default function Sidebar() {
       <div className={styles.top}>
         <div className={styles.menu}>
           <img
-            onClick={(e) => {
+            onClick={() => {
               setExtended((prev) => !prev);
             }}
             src={assets.menu_icon}
