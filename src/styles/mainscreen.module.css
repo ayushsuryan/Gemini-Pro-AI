@@ -62,3 +62,24 @@
 .card:hover{
    background-color: #dfe4ea;
 }
+
+@media screen and (max-width: 480px) {
+  .card{
+    display: none;
+  }
+  .greet  {
+    margin: 50px 0px;
+    font-size:30px ;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+  }
+
+  .generatedResponse{
+    padding: 20px 30px;
+    font-size: 12px;
+    
+  }
+
+  
+}

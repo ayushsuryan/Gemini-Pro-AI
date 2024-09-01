@@ -3,7 +3,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Import the necessary modules from the SDK
-const apiKey = "AIzaSyAa6F7PJWnJe95xfMzAZB-McaVzz0LTzoM"; // Ensure your actual API key is correctly formatted
+const apiKey = "YOUR_API_KEY"; // Ensure your actual API key is correctly formatted
 const genAI = new GoogleGenerativeAI(apiKey);
 
 async function run(prompt) {

@@ -46,3 +46,17 @@
     font-weight: 300;
     color: rgb(100, 100, 100);
 }
+
+@media screen and (max-width: 480px) {
+    .searchBox input{
+        font-size: 15px;
+    }
+    .bottom{
+        margin-bottom:5px ;
+    }
+    .bottomInfo{
+        font-size: 10px;
+    }
+
+  }
+  

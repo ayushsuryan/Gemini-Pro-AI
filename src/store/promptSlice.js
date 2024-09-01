@@ -15,8 +15,16 @@ export const promptSlice = createSlice({
     response: "",
     loading: false,
     error: null,
+    recentPrompts: [],
   },
-  reducers: {},
+  reducers: {
+    recentPrompts: (state, action) => {
+      state.recentPrompts.push(action.payload);
+    },
+    newChat: (state, action) => {
+      state.response = "";
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(sendPrompt.pending, (state) => {
@@ -35,3 +43,4 @@ export const promptSlice = createSlice({
 });
 
 export default promptSlice.reducer;
+export const { recentPrompts, newChat } = promptSlice.actions;

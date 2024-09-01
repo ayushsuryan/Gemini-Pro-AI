@@ -77,4 +77,15 @@
 }
 
 
-/* 26:46 */
+.recentElement{
+    padding: 10px 0px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .recent{
+        font-size: 14px;
+    }
+    
+  }
+  

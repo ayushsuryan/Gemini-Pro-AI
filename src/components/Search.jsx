@@ -3,6 +3,7 @@ import styles from "../styles/search.module.css";
 import { useDispatch } from "react-redux";
 import { sendPrompt } from "../store/promptSlice";
 import { useState } from "react";
+import { recentPrompts } from "../store/promptSlice";
 
 export default function Search() {
   const [input, setInput] = useState("");
@@ -11,6 +12,7 @@ export default function Search() {
     <div className={styles.bottom}>
       <div className={styles.searchBox}>
         <input
+          value={input}
           onChange={(e) => {
             setInput(e.target.value);
           }}
@@ -18,11 +20,11 @@ export default function Search() {
           placeholder="Enter a prompt here..."
         />
         <div>
-          <img src={assets.gallery_icon} alt="galleryIcon" />
-          <img src={assets.mic_icon} alt="micIcon" />
           <img
             onClick={() => {
               dispatch(sendPrompt(input));
+              dispatch(recentPrompts(input));
+              setInput("");
             }}
             src={assets.send_icon}
             alt="sendIcon"
