@@ -29,7 +29,7 @@ async function run(prompt) {
     });
 
     const result = await chatSession.sendMessage(prompt);
-    console.log(await result.response.text()); // Corrected to properly handle the result
+    return await result.response.text(); // Corrected to properly handle the result
   } catch (error) {
     console.error("Error running the prompt:", error);
   }

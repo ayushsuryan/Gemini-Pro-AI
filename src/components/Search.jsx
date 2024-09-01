@@ -1,14 +1,32 @@
 import { assets } from "../assets/assets";
 import styles from "../styles/search.module.css";
+import { useDispatch } from "react-redux";
+import { sendPrompt } from "../store/promptSlice";
+import { useState } from "react";
+
 export default function Search() {
+  const [input, setInput] = useState("");
+  const dispatch = useDispatch();
   return (
     <div className={styles.bottom}>
       <div className={styles.searchBox}>
-        <input type="text" placeholder="Enter a prompt here..." />
+        <input
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
+          type="text"
+          placeholder="Enter a prompt here..."
+        />
         <div>
           <img src={assets.gallery_icon} alt="galleryIcon" />
           <img src={assets.mic_icon} alt="micIcon" />
-          <img src={assets.send_icon} alt="sendIcon" />
+          <img
+            onClick={() => {
+              dispatch(sendPrompt(input));
+            }}
+            src={assets.send_icon}
+            alt="sendIcon"
+          />
         </div>
       </div>
       <p className={styles.bottomInfo}>
